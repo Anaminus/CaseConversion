@@ -58,7 +58,7 @@ def toggle_case(text, detectAcronyms, acronyms):
         return to_snake_case(text, detectAcronyms, acronyms)
     elif case == 'lower' and sep == '_':
         return to_camel_case(text, detectAcronyms, acronyms)
-    elif case == 'camel' and not sep:
+    elif (case == 'camel' or case == 'lower') and not sep:
         return to_pascal_case(text, detectAcronyms, acronyms)
     else:
         return text
